@@ -1,0 +1,21 @@
+header {
+    width: 100%;
+    height: 10vh;
+}
+
+header nav {
+    background-color: #827f8738;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+header nav a {
+    color: var(--text-color);
+}
+
+header nav .active {
+    color: var(--primary-color);
+}
