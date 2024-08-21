@@ -1,0 +1,43 @@
+.home {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    height: 84vh;
+    width: 100%;
+    padding: 0 3rem;
+    position: relative;
+}
+
+.home h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    visibility: hidden;
+    position: relative;
+    /* Relative position for smooth animation */
+    visibility: hidden;
+}
+
+.home h1 span {
+    color: var(--secondary-color);
+}
+
+.box {
+    border-radius: 43% 57% 15% 85% / 83% 48% 52% 17%;
+    background-color: var(--secondary-color);
+    width: 25rem;
+    height: 25rem;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* Relative position for smooth animation */
+    visibility: hidden;
+}
+
+.box img {
+    width: 80%;
+    /* visibility: hidden; */
+    object-fit: contain;
+}
