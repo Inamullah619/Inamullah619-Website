@@ -4,21 +4,21 @@ import Image from 'next/image';
 import './home.css';
 import { useEffect } from 'react';
 import gsap from 'gsap';
+import AboutContent from '@/components/CustomUI/aboutContent/AboutContent';
 
 const MainPage = () => {
   useEffect(() => {
-    // Animate the header text
+    // Animate the homeContent div
     gsap.fromTo(
-      '.home h1',
+      '.homeContent',
       {
-        x: -600,
         opacity: 0,
-        visibility: 'visible',
+        x: -600, // Start slightly below its final position
       },
       {
         duration: 1.5,
-        x: 0,
         opacity: 1,
+        x: 0,
         ease: 'power1.out',
       }
     );
@@ -29,7 +29,7 @@ const MainPage = () => {
       {
         x: 600,
         opacity: 0,
-        visibility: 'visible',
+        // visibility: 'visible',
       },
       {
         duration: 1.5,
@@ -41,20 +41,33 @@ const MainPage = () => {
   }, []);
 
   return (
-    <section className='home'>
-      <h1>
-        Hi I'm <span>Inamullah 619 </span> Professional Frontend Web Developer.
-      </h1>
-      <div className='box'>
-        <Image
-          src={'/home-bg.png'}
-          className='image'
-          width={500}
-          height={500}
-          alt='Home Background'
-        />
-      </div>
-    </section>
+    <>
+      <section className='home'>
+        <div className='homeContent'>
+          <h1>
+            Hello ✋ <br /> I'm <span>Inamullah 619 </span> a Professional
+            Frontend Web Developer.
+          </h1>
+          <p>
+            With 3 years of dedicated experience, I specialize in crafting
+            responsive and user-friendly web interfaces that adapt seamlessly to
+            any device.
+          </p>
+          <button>Hire Me</button>
+        </div>
+        <div className='box'>
+          <Image
+            src={'/home-bg.png'}
+            className='image'
+            width={500}
+            height={500}
+            alt='Home Background'
+          />
+        </div>
+      </section>
+      <hr />
+      <AboutContent />
+    </>
   );
 };
 

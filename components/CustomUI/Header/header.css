@@ -19,10 +19,15 @@ header nav {
 
 header nav a {
     color: var(--text-color);
+    transition: .3s;
+}
+
+header nav a:hover {
+    color: var(--secondary-color);
 }
 
 header nav .active {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 header .icon {

@@ -1,0 +1,41 @@
+.aboutContent {
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 3rem 3rem;
+}
+
+.aboutContent .contentDiv {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    /* Ensure the element starts as invisible */
+    gap: 10px;
+}
+
+.aboutContent h1 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.aboutImg {
+    border-radius: 43% 57% 15% 85% / 83% 48% 52% 17%;
+    background-color: var(--secondary-color);
+    width: 25rem;
+    height: 25rem;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* No opacity here as it should be controlled by GSAP */
+}
+
+.box img {
+    width: 80%;
+    object-fit: contain;
+}
