@@ -5,6 +5,7 @@ import './home.css';
 import { useEffect } from 'react';
 import gsap from 'gsap';
 import AboutContent from '@/components/CustomUI/aboutContent/AboutContent';
+import PortfolioSection from '@/components/CustomUI/PortfolioSection/PortfolioSection';
 
 const MainPage = () => {
   useEffect(() => {
@@ -39,14 +40,13 @@ const MainPage = () => {
       }
     );
   }, []);
-
   return (
     <>
       <section className='home'>
         <div className='homeContent'>
           <h1>
-            Hello ✋ <br /> I'm <span>Inamullah 619 </span> a Professional
-            Frontend Web Developer.
+            Hello ✋ <br /> I'm <span>Inamullah 619</span> a Professional Web
+            Developer.
           </h1>
           <p>
             With 3 years of dedicated experience, I specialize in crafting
@@ -67,6 +67,8 @@ const MainPage = () => {
       </section>
       <hr />
       <AboutContent />
+      <hr />
+      <PortfolioSection />
     </>
   );
 };

@@ -12,7 +12,7 @@ const AboutContent = () => {
 
   useEffect(() => {
     const content = contentRef.current;
-    const img = imgRef.current;
+    const image = imgRef.current;
 
     gsap.fromTo(
       content,
@@ -28,14 +28,14 @@ const AboutContent = () => {
       }
     );
     gsap.fromTo(
-      img,
+      image,
       { scale: 0, opacity: 0 },
       {
         scale: 1,
         opacity: 1,
         duration: 1.5,
         scrollTrigger: {
-          trigger: img,
+          trigger: image,
           once: true,
         },
       }
@@ -47,7 +47,7 @@ const AboutContent = () => {
       <div ref={contentRef} className='contentDiv'>
         <h1>About Me</h1>
         <p>
-          I'm Inamullah, a dedicated Frontend Web Developer with over 3 years of
+          I'm Inamullah, a dedicated Web Developer with over 3 years of
           experience in building dynamic and responsive web applications. I
           excel at translating design concepts into functional user interfaces
           using modern technologies like React and Next.js. My passion lies in

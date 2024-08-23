@@ -5,14 +5,13 @@
     justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    padding: 3rem 3rem;
+    padding: 3rem;
 }
 
 .aboutContent .contentDiv {
     display: flex;
     flex-direction: column;
     opacity: 0;
-    /* Ensure the element starts as invisible */
     gap: 10px;
 }
 
@@ -32,7 +31,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    /* No opacity here as it should be controlled by GSAP */
+    opacity: 0;
 }
 
 .box img {
