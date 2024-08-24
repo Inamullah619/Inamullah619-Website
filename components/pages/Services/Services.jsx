@@ -1,3 +1,5 @@
+import './services.css';
+
 const Services = () => {
   return <h1>This is Services Page.</h1>;
 };

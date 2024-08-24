@@ -4,12 +4,22 @@ import Image from 'next/image';
 import './home.css';
 import { useEffect } from 'react';
 import gsap from 'gsap';
-import AboutContent from '@/components/CustomUI/aboutContent/AboutContent';
-import PortfolioSection from '@/components/CustomUI/PortfolioSection/PortfolioSection';
+// import AboutContent from '@/components/CustomUI/aboutSection/AboutContent';
+// import PortfolioSection from '@/components/CustomUI/PortfolioSection/PortfolioSection';
+// import AboutContent from '@/components/CustomUI/aboutSection/AboutSection';
 
 const MainPage = () => {
   useEffect(() => {
     // Animate the homeContent div
+    gsap.fromTo(
+      '.home',
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+      }
+    );
     gsap.fromTo(
       '.homeContent',
       {
@@ -65,10 +75,10 @@ const MainPage = () => {
           />
         </div>
       </section>
+      {/* <hr /> */}
+      {/* <AboutContent />
       <hr />
-      <AboutContent />
-      <hr />
-      <PortfolioSection />
+      <PortfolioSection /> */}
     </>
   );
 };

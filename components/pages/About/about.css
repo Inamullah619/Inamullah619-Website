@@ -2,10 +2,10 @@
     width: 100%;
     height: auto;
     display: grid;
-    justify-items: center;
+    justify-items: start;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    padding: 3rem;
+    padding: 2.8rem 3rem;
 }
 
 .aboutContent .contentDiv {
@@ -13,12 +13,17 @@
     flex-direction: column;
     opacity: 0;
     gap: 10px;
+    padding: 0 5rem 0 0;
 }
 
 .aboutContent h1 {
     font-size: 2rem;
     margin-top: 1rem;
     font-weight: 700;
+}
+
+.paraDiv p {
+    margin: 10px 0;
 }
 
 .aboutImg {
@@ -37,4 +42,11 @@
 .box img {
     width: 80%;
     object-fit: contain;
+}
+
+.mySelf {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    opacity: 0;
 }

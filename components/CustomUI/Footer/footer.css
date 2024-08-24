@@ -1,0 +1,32 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    width: 100%;
+    height: 10vh;
+    /* display: none; */
+    opacity: 0;
+    border-top: 1px solid var(--text-color);
+}
+
+footer .footerIcon {
+    display: flex;
+    gap: 10px;
+}
+
+.footerIcon a {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.footerIcon a:hover {
+    background-color: transparent;
+}
