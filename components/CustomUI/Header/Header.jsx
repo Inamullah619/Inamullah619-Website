@@ -2,11 +2,8 @@
 
 import NavLink from '../NavLink/NavLink';
 import './header.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import gsap from 'gsap';
-// import { SiLinktree } from 'react-icons/si';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa6';
-import { SiLinktree } from 'react-icons/si';
 import Link from 'next/link';
 
 const Header = () => {
@@ -26,31 +23,34 @@ const Header = () => {
       }
     );
   }, []);
+  const [nav, setNav] = useState(false);
+
+  const navToggle = () => {
+    setNav(!nav);
+  };
   return (
-    <header className='header'>
-      <nav>
-        <NavLink href={'/'}>Home</NavLink>
-        <NavLink href={'/about'}>About</NavLink>
-        <NavLink href={'/portfolio'}>Portfolio</NavLink>
-        <NavLink href={'/services'}>Services</NavLink>
-        <NavLink href={'/contact'}>Contact</NavLink>
-      </nav>
-      <div className='icon'>
-        {/* <SiLinktree /> */}
-        <Link target='blank' href={'https://linktr.ee/inamullah619'}>
-          <SiLinktree />
+    <>
+      <header>
+        <Link className='logo' href={'/'}>
+          Inam 619
         </Link>
-        <Link
-          target='blank'
-          href={'https://www.linkedin.com/in/inamullah-fida-hussain-a3791b308/'}
+        <nav className={nav ? 'open' : ''}>
+          <NavLink href={'/'}>Home</NavLink>
+          <NavLink href={'/about'}>About</NavLink>
+          <NavLink href={'/portfolio'}>Portfolio</NavLink>
+          <NavLink href={'/services'}>Services</NavLink>
+          <NavLink href={'/contact'}>Contact</NavLink>
+        </nav>{' '}
+        <div
+          className={`hamburgerMenu ${nav ? 'open' : ''}`}
+          onClick={navToggle}
         >
-          <FaLinkedinIn />
-        </Link>
-        <Link target='blank' href={'https://github.com/Inamullah619'}>
-          <FaGithub />
-        </Link>
-      </div>
-    </header>
+          <div className='line'></div>
+          <div className='line'></div>
+          <div className='line'></div>
+        </div>
+      </header>
+    </>
   );
 };
 
