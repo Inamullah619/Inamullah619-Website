@@ -1,11 +1,11 @@
 .aboutContent {
     width: 100%;
-    height: auto;
+    height: 85vh;
     display: grid;
     justify-items: start;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 60% 40%;
     align-items: center;
-    padding: 2.8rem 3rem;
+    padding: 0 3rem;
 }
 
 .aboutContent .contentDiv {
@@ -49,4 +49,14 @@
     flex-direction: column;
     gap: 1rem;
     opacity: 0;
+}
+
+@media screen and (max-width: 769px) {
+    .aboutContent {
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
 }

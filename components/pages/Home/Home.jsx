@@ -4,9 +4,7 @@ import Image from 'next/image';
 import './home.css';
 import { useEffect } from 'react';
 import gsap from 'gsap';
-// import AboutContent from '@/components/CustomUI/aboutSection/AboutContent';
-// import PortfolioSection from '@/components/CustomUI/PortfolioSection/PortfolioSection';
-// import AboutContent from '@/components/CustomUI/aboutSection/AboutSection';
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 const MainPage = () => {
   useEffect(() => {
@@ -18,13 +16,14 @@ const MainPage = () => {
       },
       {
         opacity: 1,
+        duration: 1.5,
       }
     );
     gsap.fromTo(
       '.homeContent',
       {
         opacity: 0,
-        x: -600, // Start slightly below its final position
+        x: -600, // Start slightly left of its final position
       },
       {
         duration: 1.5,
@@ -40,7 +39,6 @@ const MainPage = () => {
       {
         x: 600,
         opacity: 0,
-        // visibility: 'visible',
       },
       {
         duration: 1.5,
@@ -50,13 +48,28 @@ const MainPage = () => {
       }
     );
   }, []);
+
+  const [text] = useTypewriter({
+    words: [
+      'Web Developer',
+      'Frontend Developer',
+      'Next.js Developer',
+      'React Developer',
+    ],
+    loop: true,
+    typeSpeed: 120,
+    deleteSpeed: 80,
+    delaySpeed: 1000,
+  });
+
   return (
     <>
       <section className='home'>
         <div className='homeContent'>
           <h1>
-            Hello ✋ <br /> I'm <span>Inamullah 619</span> a Professional Web
-            Developer.
+            Hello ✋ <br /> I'm <span>Inamullah 619</span>, a Professional{' '}
+            <br /> {text}
+            {/*   <Cursor cursorStyle='|' /> */}.
           </h1>
           <p>
             With 3 years of dedicated experience, I specialize in crafting
@@ -75,10 +88,6 @@ const MainPage = () => {
           />
         </div>
       </section>
-      {/* <hr /> */}
-      {/* <AboutContent />
-      <hr />
-      <PortfolioSection /> */}
     </>
   );
 };

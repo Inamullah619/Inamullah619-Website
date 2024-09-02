@@ -105,6 +105,7 @@ header .icon svg {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        /* background-color: #827f8738; */
         background-color: var(--secondary-color);
         position: fixed;
         top: 10vh;
@@ -115,7 +116,18 @@ header .icon svg {
         transform: translateY(-113%);
     }
 
+    /* nav a:hover */
+
     nav.open {
         transform: translateY(0);
     }
+
+    header nav a:hover {
+        color: var(--text-color);
+    }
+
+    header nav .active {
+        color: var(--text-color);
+    }
+
 }

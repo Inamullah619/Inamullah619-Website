@@ -4,15 +4,21 @@ footer {
     align-items: center;
     padding: 0 2rem;
     width: 100%;
-    height: 10vh;
+    height: auto;
+    padding: 1rem 2.5rem;
     /* display: none; */
     opacity: 0;
     border-top: 1px solid var(--text-color);
 }
 
+.footerPara {
+    transform: translateX(-300);
+}
+
 footer .footerIcon {
     display: flex;
     gap: 10px;
+    /* transform: translateX(300); */
 }
 
 .footerIcon a {
@@ -29,4 +35,13 @@ footer .footerIcon {
 
 .footerIcon a:hover {
     background-color: transparent;
+}
+
+
+@media screen and (max-width: 769px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 }

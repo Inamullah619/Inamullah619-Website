@@ -1,6 +1,6 @@
 .home {
-    display: grid;
-    justify-items: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
     height: 87.1vh;
@@ -16,6 +16,7 @@
     align-items: start;
     gap: 1rem;
     opacity: 0;
+    width: 32rem;
 }
 
 .home .homeContent h1 {
@@ -57,6 +58,22 @@
 }
 
 .box img {
-    width: 80%;
+    width: 20rem;
     object-fit: contain;
+}
+
+@media screen and (min-width: 1281px) {
+    .homeContent {
+        width: 32rem;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .home .homeContent h1 {
+        font-size: 1.7rem;
+    }
+
+    .box {
+        display: none;
+    }
 }

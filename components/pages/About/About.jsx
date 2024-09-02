@@ -32,19 +32,6 @@ const About = () => {
         },
       }
     );
-    // gsap.fromTo(
-    //   image,
-    //   { scale: 0, opacity: 0 },
-    //   {
-    //     scale: 1,
-    //     opacity: 1,
-    //     duration: 1.5,
-    //     scrollTrigger: {
-    //       trigger: image,
-    //       once: true,
-    //     },
-    //   }
-    // );
     gsap.fromTo(
       mySelf,
       { scale: 0, opacity: 0 },
@@ -94,7 +81,7 @@ const About = () => {
         </div> */}
         <div className='mySelf' ref={mySelfRef}>
           <div className='list'>
-            <b>First Name: </b>
+            <b>Name: </b>
             <span>Inamullah</span>
           </div>
           <div className='list'>
@@ -119,7 +106,7 @@ const About = () => {
           </div>
           <div className='list'>
             <b>Current Location: </b>
-            <span>Peshawar, Pakistan</span>
+            <span>Gilgit Baltistan, Pakistan</span>
           </div>
           {/* <div className='list'>
             <b>Skills: </b>

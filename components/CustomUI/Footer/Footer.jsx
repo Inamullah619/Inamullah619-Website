@@ -11,6 +11,9 @@ import './footer.css';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
   useEffect(() => {
@@ -18,48 +21,43 @@ const Footer = () => {
       'footer',
       {
         opacity: 0,
-        // display: 'none',
       },
       {
         opacity: 1,
-        // display: 'flex',
+        duration: 1.5,
+        ease: 'power1.out',
       }
     );
 
     gsap.fromTo(
       '.footerPara',
       {
-        opacity: 0,
-        x: -600, // Start slightly below its final position
+        x: -300,
       },
       {
         duration: 1.5,
-        opacity: 1,
         x: 0,
         ease: 'power1.out',
       }
     );
 
-    // Animate the image
     gsap.fromTo(
       '.footerIcon',
       {
-        x: 600,
-        opacity: 0,
+        x: 300,
       },
       {
         duration: 1.5,
         x: 0,
-        opacity: 1,
         ease: 'power1.out',
       }
     );
-    console.log('Hi');
   }, []);
+
   return (
     <footer>
-      <p className='footerPara'>&copy;Copyright. All rights Reseverd.</p>
-      {/* <div className='footerIcon'>
+      <p className='footerPara'>&copy; Copyright. All rights Reserved.</p>
+      <div className='footerIcon'>
         <Link
           target='blank'
           href={'https://www.facebook.com/profile.php?id=61550480851426'}
@@ -81,7 +79,7 @@ const Footer = () => {
         >
           <FaLinkedinIn />
         </Link>
-      </div> */}
+      </div>
     </footer>
   );
 };
